@@ -1,0 +1,71 @@
+/*LOGO de Whats APP flotante*/
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  
+  .whatsapp-icon {
+    margin-top:13px;
+  }
+
+ /*Social ICONS*/ 
+.social-icons ul li{
+  padding: 0 10px;
+
+}
+
+.social-icons ul li:last-child{
+  padding-right: 40px;
+
+}
+
+.social-icons ul li a{
+  font-size: 18px;
+  color: #d3d3d3;
+  padding: 0;
+}
+
+.social-icons ul li a:hover .fa-facebook {
+  color:#0884d5;
+}
+
+.social-icons ul li a:hover .fa-phone {
+  color:rgb(236, 73, 9);
+}
+
+.social-icons ul li a:hover .fa-whatsapp {
+  color:rgb(48, 221, 57);
+}
+
+.social-icons ul li a:hover .fa-dribbble {
+  color:#E94989;
+}
+
+.social-icons ul li a:hover .fa-linkedin {
+  color:#006DC0;
+}
+
+.social-icons ul li a:hover,
+.social-icons ul li a:focus{  
+  background: none;
+}
+
+/*social icons responsive*/
+.social-icons.pull-right{
+  float: right !important;
+}
+.social-icons.pull-center{
+  float: center !important;
+}
+.social-icons ul li:first-child{
+  padding-left: 0;
+}
