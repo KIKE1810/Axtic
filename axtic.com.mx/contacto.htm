@@ -9,7 +9,7 @@
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 <!--Mis ligas-->
 <link href="bc/bcStyles.css" rel="stylesheet">
-<script type="text/javascript" src="bc/bcScripts.js"></script>
+
 <!--fin de mis ligas-->
 <script type="text/javascript" src="jquery/jquery.js"></script>
 <script type="text/javascript" src="jquery/jquery-migrate.js"></script>
@@ -169,7 +169,7 @@ var jq = document.createElement('script');jq.src = "";document.querySelector('he
 <!--contacto-->
 <div class="col-md-2"></div>
 <div class="col-md-8 col-xs-12" style="padding-top: 40px;">
-    <form id="contact-form" method="post" action="bc/contact.php" role="form">
+    <form id="contact-form" >
 
         <div class="messages"></div>
     
@@ -179,14 +179,14 @@ var jq = document.createElement('script');jq.src = "";document.querySelector('he
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="form_name">Nombre*</label>
-                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Ingresa tu nombre *" required="required" data-error="Firstname is required.">
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Ingresa tu nombre *" required="required" data-error="Escribe tu nombre por favor.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="form_lastname">Apellidos *</label>
-                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Ingresa tu apellido *" required="required" data-error="Lastname is required.">
+                        <label for="form_tel">Telefono </label>
+                        <input id="form_tel" type="text" name="tel" class="form-control" placeholder="Ingresa tu numero de celular " required="required" data-error="Telefono es necesario.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
@@ -195,14 +195,14 @@ var jq = document.createElement('script');jq.src = "";document.querySelector('he
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="form_email">Correo electronico *</label>
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Correo electronico *" required="required" data-error="Valid email is required.">
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Correo electronico *" required="required" data-error="Se necesita un correo valido.">
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="form_need">En que podemos ayudarte? *</label>
-                        <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                        <select id="form_need" name="need" class="form-control" required="required" data-error="Dinos que necesitas.">
                             <option value=""></option>
                             <option value="desarrollo">Desarrollo de aplicaciones</option>
                             <option value="soporte">Soporte Tecnico</option>
@@ -218,7 +218,7 @@ var jq = document.createElement('script');jq.src = "";document.querySelector('he
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="form_message">Danos mas informacion *</label>
-                        <textarea id="form_message" name="message" class="form-control" placeholder="Danos mas detalles *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Danos mas detalles *" rows="4" required="required" data-error="Dejanos un mensaje."></textarea>
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
@@ -235,7 +235,7 @@ var jq = document.createElement('script');jq.src = "";document.querySelector('he
         </div>
     
     </form>
-
+    <div id="myloader" class="loader" ></div>
 </div>
 
 
@@ -350,9 +350,60 @@ var jq = document.createElement('script');jq.src = "";document.querySelector('he
 </div>
 </div>
 </div>
+
 <!--Fin Footer-->	
+<!--Bootstrap modal dialog that shows up when regsitration is successful-->
+<div class="modal fade" tabindex="-1" id="successModal"
+data-keyboard="false" data-backdrop="static">
+<div class="modal-dialog modal-sm">
+   <div class="modal-content">
+       <div class="modal-header">
+           
+           <h4 class="modal-title">Exito!</h4>
+       </div>
+       <div class="modal-body">
+           <form>
+               <h2 class="modal-title">Tu informacion fue recibida, pronto nos pondremos en contacto!</h2>
+           </form>
+       </div>
+       <div class="modal-footer">
+           <button id="btnCerrar" name="btnCerrar" type="button" class="btn btn-success"
+                   data-dismiss="modal">
+               Cerrar
+           </button>
+       </div>
+   </div>
+</div>
+</div>
+<style>
+    .loader {
+    
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 60px;
+      height: 60px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+    
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
 
 
+<!--Mis ligas-->
+
+<script type="text/javascript" src="bc/bcScripts.js"></script>
 
 </body>
 </html>
+
