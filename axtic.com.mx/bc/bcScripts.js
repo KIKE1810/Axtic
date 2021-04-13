@@ -14,8 +14,9 @@ $(document).ready(function (){
 //$(function setAction () {
     // Save the new user details
     //$('#btnContacto').click(function () {
-        $('#contact-form').on('submit', function () {
-            
+       //$('#contact-form').on('submit', function () {
+        $('#contact-form').submit( function (e) {
+            e.preventDefault();
             $('#myloader').show();
             var url = "http://tics-tula.com/contacto/api/mail";
             $.ajax({
@@ -31,7 +32,7 @@ $(document).ready(function (){
                         
                     },
                     success: function () {
-                      
+                     // alert("Hemos recibido tu informacion! Enseguida nos ponemos en contacto.");
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                         $('#successModal').modal('show');
                         $('#myloader').hide();
@@ -39,14 +40,14 @@ $(document).ready(function (){
                         //window.location.href = "/index.html";//aqui va al inde
                     },
                     error: function (jqXHR) {
-                        $('#divErrorText').text(jqXHR.responseText);
-                        $('#divError').show('fade');
+                        //$('#divErrorText').text(jqXHR.responseText);
+                        //$('#divError').show('fade');
                         $('#myloader').hide();
-                        alert('Algo salio mal')
+                        alert('Algo salio mal: '+jqXHR.responseText);
                     }
                 });
                 $('#btnCerrar').click(function () {
-                    window.location.href = "axtic/contacto.htm"
+                    window.location.href = "index.htm"
                 });
         
            
