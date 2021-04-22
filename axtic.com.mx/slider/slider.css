@@ -1,0 +1,18 @@
+.indicadores{
+    display: flex;
+    text-align: center;
+    position: absolute;
+    z-index: 10000;
+}
+.indicador{
+width: 10px; 
+height: 10px; 
+background-color: #a3a3a3; 
+border-radius: 100%;
+margin:5px;
+text-align: center;
+margin-top: -25px;
+}
+.indicador:hover{
+background-color: #279deb; 
+}
