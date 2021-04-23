@@ -70,10 +70,10 @@
    
       function cambiodeEstado(imagen){
                //Revisar animación si se queda o se quita. 
-          var banner = document.getElementById("contenedorBanner");
-          banner.innerHTML =  '<img src="'+imagen+'" class="img-responsive animate__animated animate__fadeIn" id="banneraxtic">';
+         // var banner = document.getElementById("contenedorBanner");
+          //banner.innerHTML =  '<img src="'+imagen+'" class="img-responsive animate__animated animate__fadeIn" id="banneraxtic">';
 
-          //$("#banneraxtic").attr("src",imagen);
+          $("#banneraxtic").attr("src",imagen);
        }
        function pintarIndicador(indicador){
             $("#indicador1").css("background-color","#a3a3a3");
